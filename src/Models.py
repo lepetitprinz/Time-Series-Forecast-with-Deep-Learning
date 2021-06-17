@@ -77,8 +77,8 @@ class Models(object):
         # define encoder-decoder LSTM model
         # Many-to-one model
         model = Sequential()
-        model.add(LSTM(64, activation=self.activation, input_shape=(self.window_input, self.n_features),
-                       return_sequences=True))
+        model.add(LSTM(64, activation=self.activation, return_sequences=True,
+                       input_shape=(self.window_input, self.n_features)))
         model.add(LSTM(32, activation=self.activation, return_sequences=False))
         model.add(RepeatVector(self.window_input))
         model.add(LSTM(32, activation=self.activation, return_sequences=True))

@@ -29,8 +29,6 @@ class WindowGenerator(object):
         self.labels_slice = slice(self.label_start, None)
         self.label_indices = np.arange(self.total_window_size)[self.labels_slice]
 
-        self.example = None
-
     def __repr__(self):
         return '\n'.join([
             f'Total window size: {self.total_window_size}',
