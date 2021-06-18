@@ -1,17 +1,14 @@
-import pandas as pd
-
 import config
 from WindowGenerator import WindowGenerator
 
-import os
-
+import pandas as pd
 import tensorflow as tf
-from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.layers import LSTM, Dense, Input, BatchNormalization
-from tensorflow.keras.layers import RepeatVector, TimeDistributed
-from tensorflow.keras.layers import Lambda, Conv1D, Reshape
-from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.layers import LSTM, Dense, Input, BatchNormalization
+from tensorflow.keras.layers import Lambda, Conv1D, Reshape
+from tensorflow.keras.layers import RepeatVector, TimeDistributed
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.optimizers import Adam
 
 
 class Models(object):
